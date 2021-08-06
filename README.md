@@ -10,10 +10,10 @@ Upload all files from a local directory to AWS S3.
  ## Installation
 First clone repository.  
 
-	 $ git clone https://github.com/MojixCoder/AWS-uploader.git 
+	 $ git clone https://github.com/MojixCoder/AWS-Uploader.git 
 Go to cloned directory.  
 
-    $ cd AWS-uploader/  
+    $ cd AWS-Uploader/  
 Now install `requirements.txt` and run `aws.py`.
 
     $ pip install -r requirements.txt && python aws.py
