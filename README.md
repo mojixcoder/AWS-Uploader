@@ -19,7 +19,7 @@ Now install `requirements.txt` and run `aws.py`.
     $ pip install -r requirements.txt && python aws.py
 
  ## Example
-When you run `aws.py`  it receives 6 parameters.
+When you run `aws.py`  it receives 6 parameters:
 
  1. **Directory:** Absolute path to directory
  2. **Endpoint URL:** AWS endpoint URL
