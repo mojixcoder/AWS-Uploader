@@ -38,7 +38,7 @@ Let's sat you have this directory.
 	│   └── sub_dir2
 	│       ├── c.txt
 	│       └── sub_sub_dir
-	│			└── d.txt
+	│		└── d.txt
 
 After it starts uploading files it uses the sub directories as separators.  
 
