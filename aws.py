@@ -36,7 +36,7 @@ def upload(*, bucket_name, s3_resource, directory, ACL):
         base_name = get_base_name(directory)
         count = 0
         print()
-        print(f"Uploading file to {bucket_name}...")
+        print(f"Uploading files to {bucket_name}...")
         print()
         for dirname, dirs, files in os.walk(directory):
             for filename in files:
@@ -52,6 +52,7 @@ def upload(*, bucket_name, s3_resource, directory, ACL):
                     )
                 print(f"Uploaded '{object_name}'")
                 count += 1
+        print()
         print(f"{count} files uploaded.")
     except ClientError as e:
         logging.error(e)
