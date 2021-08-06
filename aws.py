@@ -20,15 +20,12 @@ def get_s3_resource(*, endpoint_url, aws_access_key_id, aws_secret_access_key):
         logging.info(e)
         
 
-def get_mother_root(directory):
+def get_base_name(path):
+    if not os.path.isdir(path):
+        raise ValueError("Directory is not valid or doesn't exist.")
     try:
-        if directory.endswith("/") and len(directory) > 1:
-            mother_root = directory.split("/")[-2]
-        elif len(directory) > 1:
-            mother_root = directory.split("/")[-1]
-        else:
-            mother_root = "/"
-        return mother_root
+        base_name = os.path.basename(os.path.normpath(path))
+        return base_name
     except Exception as e: 
         logging.error(e)
 
@@ -36,7 +33,7 @@ def get_mother_root(directory):
 def upload(*, bucket_name, s3_resource, directory, ACL):
     try:
         bucket = s3_resource.Bucket(bucket_name)
-        mother_root = get_mother_root(directory)
+        base_name = get_base_name(directory)
         count = 0
         print()
         print(f"Uploading file to {bucket_name}...")
@@ -44,7 +41,7 @@ def upload(*, bucket_name, s3_resource, directory, ACL):
         for dirname, dirs, files in os.walk(directory):
             for filename in files:
                 dirname = dirname if dirname.endswith("/") else dirname + "/"
-                object_name = dirname.split(mother_root)[-1][1:]
+                object_name = dirname.split(base_name)[-1][1:]
                 file_path = dirname + filename
                 object_name = object_name + filename
                 with open(file_path, "rb") as file:
