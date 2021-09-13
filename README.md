@@ -3,11 +3,11 @@ Upload all files from a local directory to AWS S3.
 
 ***Note:***
 
- - Only supports Linux and **doesn't** support Windows yet.
- - Tested on Ubuntu 20.04.2.
+ - Only supports Linux and **doesn't** support Windows yet
+ - Tested on Ubuntu 20.04.2
  
 
- ## Installation
+## Installation
 First clone repository.  
 
 	 $ git clone https://github.com/MojixCoder/AWS-Uploader.git 
@@ -18,7 +18,7 @@ Now install `requirements.txt` and run `aws.py`.
 
     $ pip install -r requirements.txt && python aws.py
 
- ## Example
+## Example
 When you run `aws.py`  it receives 6 parameters:
 
  1. **Directory:** Absolute path to directory
@@ -28,7 +28,7 @@ When you run `aws.py`  it receives 6 parameters:
  5. **ACL:** Access Control List like private, public-read, etc.
  6. **Bucket name:** Bucket name that you want to upload files on.  
 
-Let's sat you have this directory.   
+Let's say you have this directory.   
 
     .
     ├── directory
