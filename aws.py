@@ -99,7 +99,7 @@ def delete_many(object_list):
 
 def download_all(*, s3_resource, bucket_name, download_path):
     print()
-    print("Downloading files...")
+    print(f"Downloading files from {bucket_name}...")
     print()
     
     bucket = s3_resource.Bucket(bucket_name)
