@@ -158,12 +158,12 @@ def main():
         )
         delete_many(object_list(s3_resource=s3_resource, bucket_name=bucket_name))
     elif choice == "3":
+        download_path = input("Enter download path: ")
         s3_resource = get_s3_resource(
             endpoint_url=endpoint_url, 
             aws_access_key_id=aws_access_key_id, 
             aws_secret_access_key=aws_secret_access_key,
         )   
-        download_path = input("Enter download path: ")
         download_all(s3_resource=s3_resource, bucket_name=bucket_name, download_path=download_path)
     else:
         print("Wrong choice!")
