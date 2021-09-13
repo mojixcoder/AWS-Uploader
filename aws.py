@@ -172,9 +172,3 @@ def main():
 if __name__ == "__main__":
     main()
     
-    
-# https://s3.ir-thr-at1.arvanstorage.com
-# 7986cf03-bcd2-4d0b-903a-f9d4f7f499f0
-# 149afed4868712f3bda8fcefcb1eef389466693c7504439a5f7023d707b6643a
-
-# /home/mojix/Projects/aws_git/dl
